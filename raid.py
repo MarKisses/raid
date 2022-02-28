@@ -21,7 +21,7 @@ class RaidBot:
         logger.info(f"@{username} is ready to attack!")
 
     def start(self):
-        @self.dp.message_handler(content_types=["text"])
+        @self.dp.message_handler(commands=["raid"])
         async def on_message(message: types.Message):
             if message.text == "Слава Україні":
                 for _ in range(config.COUNT):
